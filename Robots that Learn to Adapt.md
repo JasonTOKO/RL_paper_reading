@@ -26,7 +26,7 @@ $$ L=\Sigma_{tasks}||f_{\theta'}(s,a)-s'||^2|_{data_K} $$
 
 其中：
 
-$$ \theta'=u(\theta,data_M) $$
+$$ \theta\prime=u(\theta,data_M) $$
 
 整个过程可用下图来描述：
 ![b23de237b53464033ca6cc3111dafcd4.png](http://bair.berkeley.edu/static/blog/adapt/fig4.png)
@@ -38,7 +38,7 @@ $$ \theta'=u(\theta,data_M) $$
 
 **Gradient-Based Adaptive Learner (GrBAL)**:使用类似MAML的梯度方法。
 
-$$ \theta'_{\epsilon} = u_\psi(\tau_\epsilon(t-M, t-1), \theta)= \theta_\epsilon + \psi\nabla_\theta\frac{1}{M} \sum_{m=t-M}^{t-1} log \hat{p}_{\theta_\epsilon}(s_{m+1}|s_m, a_m) $$
+$$ \theta\prime_{\epsilon} = u_\psi(\tau_\epsilon(t-M, t-1), \theta)= \theta_\epsilon + \psi\nabla_\theta\frac{1}{M} \sum_{m=t-M}^{t-1} log \hat{p}_{\theta_\epsilon}(s_{m+1}|s_m, a_m) $$
 
 
 **Recurrence-Based Adaptive Learner (ReBAL)**:实际上利用LSTM里面的门结构，用RNN模拟学习这个过程，用其中的隐含状态和元胞状态表示待学习的模型参数等，从而学习出更新规则（方向和步长等），具体原理可见[Optimization as a moder for FSL](https://openreview.net/pdf?id=rJY0-Kcll)

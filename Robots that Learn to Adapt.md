@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # Robots that Learn to Adapt
 BAIR实验室所著，论文发布在ICLR 2019
 

@@ -27,7 +27,6 @@ $$ L=\Sigma_{tasks}||f_{\theta'}(s,a)-s'||^2|_{data_K} $$
 其中：
 
 $$ \theta'=u(\theta,data_M) $$
-$$a+b$$
 
 整个过程可用下图来描述：
 ![b23de237b53464033ca6cc3111dafcd4.png](http://bair.berkeley.edu/static/blog/adapt/fig4.png)

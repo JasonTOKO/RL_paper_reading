@@ -1,4 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # Robots that Learn to Adapt
 BAIR实验室所著，论文发布在ICLR 2019
 
@@ -28,6 +27,7 @@ $$ L=\Sigma_{tasks}||f_{\theta'}(s,a)-s'||^2|_{data_K} $$
 其中：
 
 $$ \theta'=u(\theta,data_M) $$
+$$a+b$$
 
 整个过程可用下图来描述：
 ![b23de237b53464033ca6cc3111dafcd4.png](http://bair.berkeley.edu/static/blog/adapt/fig4.png)

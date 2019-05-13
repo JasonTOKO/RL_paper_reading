@@ -22,11 +22,11 @@ BAIR实验室所著，论文发布在ICLR 2019
 
 实现：与MAML的随机采数据不同，在meta-training阶段，选择（M+K）长度的数据序列，前M个数据作为训练集，根据更新规则u学习一个adapted model，后K个数据则作为测试集，评估adapting过程的损失，如下所示：
 
-$$L=\Sigma_{tasks}||f_{\theta'}(s,a)-s'||^2|_{data_K}$$
+$$ L=\Sigma_{tasks}||f_{\theta'}(s,a)-s'||^2|_{data_K} $$
 
 其中：
 
-$$\theta'=u(\theta,data_M)$$
+$$ \theta'=u(\theta,data_M) $$
 
 整个过程可用下图来描述：
 ![b23de237b53464033ca6cc3111dafcd4.png](http://bair.berkeley.edu/static/blog/adapt/fig4.png)

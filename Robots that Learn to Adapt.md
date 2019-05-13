@@ -8,7 +8,7 @@ BAIR实验室所著，论文发布在ICLR 2019
 现在这份工作想做到极致，实现**基于模型**的、**在线**的、只需**几个timesteps**即可完成的快速adaptation。
 
 整个方法的框架：
-![23b594f0dea4c087847d26dc3918c7f3.png](en-resource://database/500:0)
+![23b594f0dea4c087847d26dc3918c7f3.png](http://bair.berkeley.edu/static/blog/adapt/fig3.png)
 
 ## 主要思想：MAML式的元学习框架
 ### 1、采用model-based而非model-free
@@ -25,7 +25,7 @@ L=\Sigma_{tasks}||f_{\theta'}(s,a)-s'||^2|_{data_K}
 \theta'=u(\theta,data_M)
 ```
 整个过程可用下图来描述：
-![b23de237b53464033ca6cc3111dafcd4.png](en-resource://database/502:0)
+![b23de237b53464033ca6cc3111dafcd4.png](http://bair.berkeley.edu/static/blog/adapt/fig4.png)
 
 ### 3、采用而不是SGD
 理由：对于非线性、表达能力高的FA（如NN），单纯使用SGD比较低效，（NN需要大量的数据才能学习出效果）因此在复杂环境中，往往难以实现快速适应。

@@ -86,3 +86,8 @@ $$ \theta_i=\theta + \theta_{offset} -\sum_{D_i^{train}}A_\Phi(s_t, a_t, s{t+1})
 ![](https://github.com/JasonTOKO/RL_paper_reading/blob/master/figure/NoRML_fig5.png)
 
 由Fig.5a可见，显然在没有奖励的情况下，MAML无法进行adaptation，因此表现较差（和没有LAF的NoRML差不多），NoRML无论是收敛速度和最终效果都比MAML好。而DR虽然能达到和NoRML相当的效果，但是其步态看起来却没有NoRML稳定（Fig.5b&c）
+
+## 总结
+NoRML在缺少奖励、传感器偏移、环境dynamics改变等情况下比MAML表现得更好，其中关键的因素在于**LAF**（Learned Advantage Function）和**parameter offset**。
+
+**总的来说，LAF使得agent更快适应环境dynamics变化，同时可以克服无外部奖励时候RL难以适应的问题，而offset可以明显地减少方差，且能使得最终的微调效果更好。**

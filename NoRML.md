@@ -63,13 +63,17 @@ $$ \theta_i=\theta + \theta_{offset} -\sum_{D_i^{train}}A_\Phi(s_t, a_t, s{t+1})
 
 任务设置：agent需要从点（0,0）移动到点（1,0），但其运动会受到旋转角$\phi$的影响，不同任务dynamics有着不同的$\phi$
 
+奖励设置：
+* Shaped reward：每步的奖励是到点（1,0）的欧氏距离的负数；
+* Sparse reward: 每步的奖励是-1；
+
 实验结果：
 
 ![](https://github.com/JasonTOKO/RL_paper_reading/blob/master/figure/NoRML_fig2.png)
 
 ![](https://github.com/JasonTOKO/RL_paper_reading/blob/master/figure/NoRML_fig3.png)
 
-显然，在奖励比较稀疏（更难学习）的时候，MAML效果不佳，而采用LAF能有明显的效果。Fig.2 表明了有offset可以使得最终微调收敛的更好。
+显然，在奖励设置比较稀疏（奖励中包含环境变化的信息更少）的时候，MAML效果不佳，而采用LAF能有明显的效果。Fig.2 表明了有offset可以使得最终微调收敛的更好。
 
 而Fig.3 也说明了加上offset可以大大减少方差，并且可以很好地缩减微调的次数。
 
